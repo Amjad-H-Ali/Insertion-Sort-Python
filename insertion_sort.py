@@ -19,9 +19,14 @@ for i in range(1, len(array)):
 
 		if (current_elem < array[indx_B4] ):
 
-			# Do Something
+			# Insert
+			array[indx_B4 + 1] = array[indx_B4]
+
+			array[indx_B4] = current_elem 
 
 			indx_B4 -= 1
+
 		else:
 			break
+			
 
