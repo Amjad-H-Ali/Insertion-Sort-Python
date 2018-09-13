@@ -2,31 +2,40 @@ print("Insertion Sort!")
 
 
 
-array = [4, 2, 7, 96, 23, 45, 67, 3, 2, 3, 3, 9, 0, -1, 26, 0]
+numbers = [4, 2, 7, 96, 23, 45, 67, 3, 2, 3, 3, 9, 0, -1, 26, 0]
 
-# Loop over Array starting from index one
-for i in range(1, len(array)):
 
-	# Current element
-	current_elem = array[i]
+def insertion_sort(array):
 
-	# Index before the current element
-	indx_B4 = i - 1
+	# Loop over Array starting from index one
+	for i in range(1, len(array)):
 
-	# Compare the current element to previous elements
-	# until no lesser value is found 
-	while (indx_B4 >= 0):
+		# Current element
+		current_elem = array[i]
 
-		if (current_elem < array[indx_B4] ):
+		# Index before the current element
+		indx_B4 = i - 1
 
-			# Insert
-			array[indx_B4 + 1] = array[indx_B4]
+		# Compare the current element to previous elements
+		# until no lesser value is found 
+		while (indx_B4 >= 0):
 
-			array[indx_B4] = current_elem 
+			if (current_elem < array[indx_B4] ):
 
-			indx_B4 -= 1
+				# Insert
+				array[indx_B4 + 1] = array[indx_B4]
 
-		else:
-			break
-			
+				array[indx_B4] = current_elem 
+
+				indx_B4 -= 1
+
+			else:
+				break
+
+	return array
+
+print(insertion_sort(numbers))				
+
+		
+
 
